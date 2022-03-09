@@ -1,0 +1,209 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+th {
+	font-weight: bold;
+}
+
+header
+{
+
+	height: 100vh;
+	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('brampton.jpg');
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: cover;
+	justify-content: center;
+	margin-bottom: 30px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#heading1 {
+	font-size: 50px;
+	color: white;
+	text-shadow: 1px 1px 25px rgba(0, 0, 0, 1);
+}
+
+#heading2 {
+	font-size: 30px;
+	color: white;
+	text-shadow: 1px 1px 25px rgba(0, 0, 0, 1);
+}
+
+#down
+{
+	position: absolute;
+	top:85vh;
+	size: 40px;
+	padding: 20px;
+	font-size: 2.5em;
+	color: white;
+}
+
+#down:hover
+{
+	cursor: pointer;
+	background-color: rgb(3, 3, 3);
+	opacity: 0.8;
+}
+
+#sidebar-wrapper {
+	width: 26%;
+	padding-left: 2%;
+    padding-right: 2%;
+	padding-top: 3%;
+	padding-bottom: 3%
+}
+
+#selectBox {
+	width: 60%;
+}
+
+#paragraph {
+	padding-left: 5%;
+}
+
+
+#my-map {
+	width:100%;
+	height: 90%;
+}
+
+/*Legend specific*/
+.legend {
+	padding: 6px 8px;
+	font: 14px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255, 255, 255, 0.8);
+	/*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
+	/*border-radius: 5px;*/
+	line-height: 24px;
+	color: #555;
+  }
+  .legend h4 {
+	text-align: center;
+	font-size: 16px;
+	margin: 2px 12px 8px;
+	color: #777;
+  }
+  
+  .legend span {
+	position: relative;
+	bottom: 3px;
+  }
+  
+  .legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin: 0 8px 0 0;
+	opacity: 0.7;
+  }
+  
+  .legend i.icon {
+	background-size: 18px;
+	background-color: rgba(255, 255, 255, 1);
+  }
+  
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  .myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+	.modal-content {
+	  width: 100%;
+	}
+  }
+
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }

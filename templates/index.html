@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="static/styles.css" />
+<link href="static/simple-sidebar.css" rel="stylesheet">
+<script src="https://unpkg.com/@turf/turf@3.5.2/turf.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/static/main.js"></script>
+
+
+<style>
+	table {
+		border-collapse: collapse;
+		border: 2px black solid;
+		font: 12px sans-serif;
+	}
+
+	td {
+		border: 1px black solid;
+		padding: 5px;
+	}
+</style>
+
+
+</head>
+
+<body>
+
+
+    <div class="d-flex" id="wrapper">
+		
+  
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <h3 >Step 1: Select Motion to Visualize on the Map</h3>
+        <br>
+        <!-- <input type="text" id="txtName"/> -->
+        <select id="selectBox">
+          <option value="">Pick a Motion to Visualize</option>
+
+          <!-- things people agree on -->
+          <option value="C264-2020">Mandate the Use of Non-Medical Masks - All Wards</option>
+          <option value="C094-2019">Complaint Against Correctional Service Canada to reincarerate Convicted Pedophile</option>
+          <option value="CW175-2020">One Time Donation to Women's Shelters</option>
+          
+          <option value="CW079-2020">Land Acknowledgement signage on City Owned Properties</option>
+          <option value="CW112-2019">Transit Pass Costs for Seniors</option>
+          <option value="PDC077-2020">Phase One Interim Fee Increase for Development and Site Plan Applications (R 131/2020) </option>
+          <option value="CW012-2020">Alternative Payment Options for City Services</option>
+          <option value="CW028-2021">Public Question Period</option>
+          <option value="C437-2020">Genocide Awareness Week</option>
+          <option value="CW027-2019">Allow Lawn Signs expressing opinion on public policy on private property</option>
+        </select>
+		    <a href = "javascript:;" onclick = "this.href='' + document.getElementById('selectBox').value">Load on Map</a>
+        <br>
+        <br>
+
+        <h3>Step 2: Examine the details of the selected motion in the table at the bottom of the page.</h3>
+        <br>
+        <h4>What does the legend mean?</h4>
+        <p id="paragraph">Each ward is represented by two city councillors. The legend sorts the possible combinations of votes that represent the decision of each ward. For example, in a ward classified as "Yes-Yes", both city councillors voted Yes for the selected motion.</p>
+        <br>
+
+        <h3>Step 3: Explore how Brampton's city councillors (representing YOU) voted for this motion by clicking on any ward.</h3>
+        <br>
+        <br>
+
+        <h5>Data Sources:</h5>
+        <li>
+          City of Brampton Open Data
+        </li>
+        <li>
+          ESRI Basemap - Light Gray
+        </li>
+
+        
+
+
+
+
+        <div id="motion-info2"></div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+  
+      <!-- Page Content -->
+
+	  <div class="container-fluid">
+		  <div id="my-map"></div>
+		  <div class="row">
+			<div class="col-md-12">
+			<div id="motion-info"></div>
+			</div>
+		  </div>
+        <!-- <div id="my-map"></div> -->
+      </div>
+
+
+	  
+
+    </div>
+
+      <!-- /#page-content-wrapper -->
+  
+
+    <!-- /#wrapper -->
+  
+    <!-- Bootstrap core JavaScript -->
+
+  
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+  
+  </body>
+</html>
