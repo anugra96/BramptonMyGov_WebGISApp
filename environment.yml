@@ -1,4 +1,4 @@
-name: C:\Users\anugr\Documents\projects\mygov_tutorial\venv
+name: venv
 channels:
   - conda-forge
   - defaults
@@ -127,4 +127,4 @@ dependencies:
   - xz=5.2.5=h62dcd97_1
   - zlib=1.2.11=h8ffe710_1013
   - zstd=1.5.2=h6255e5f_0
-prefix: C:\Users\anugr\Documents\projects\mygov_tutorial\venv
+prefix: venv
