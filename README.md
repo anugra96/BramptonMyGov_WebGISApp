@@ -3,7 +3,7 @@
 ## How To Run App On Localhost
 
 
-### 1. Install miniconda on local machine
+### 1. Install miniconda on local machine.
 Go to [Miniconda — Conda documentation](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links) to download the appropriate installer for your local machine.
 
 ### 2. Open Anaconda Prompt (Miniconda3)
